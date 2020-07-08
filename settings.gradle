@@ -1,2 +1,5 @@
 include ':app',
-        ':model'
+        ':model',
+        ':data:repository',
+        ':features:settings',
+        ':core'
