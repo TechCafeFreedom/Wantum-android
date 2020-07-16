@@ -22,5 +22,3 @@ Before | After
 
 ## Notes
 
-- 確認してOKだったらapproveしてね
-- 誰かapproveしてくれたらセルフマージするね
