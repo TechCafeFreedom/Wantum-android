@@ -1,4 +1,4 @@
-package com.techcafe.wantum_android
+package com.techcafe.wantum
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
