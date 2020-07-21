@@ -1,6 +1,4 @@
 ---
-name: 通常のissue
-about: 通常のissue templete
 title: ''
 labels: ''
 assignees: ''
