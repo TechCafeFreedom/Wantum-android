@@ -10,6 +10,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.techcafe.wantum.auth.databinding.FragmentSignUpBinding
@@ -49,6 +50,15 @@ class SignUpFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
         binding.signUpWithGoogle.setOnClickListener { signInWithGoogle() }
+        binding.signOut.setOnClickListener { viewModel.signOut() }
+
+        viewModel.isSignIn.observe(viewLifecycleOwner){
+            // TODO: SignInしていたらfinishしてTop画面へ遷移する
+        }
+
+        viewModel.error.observe(viewLifecycleOwner){
+            // TODO: SnackBarでerrorを表示する
+        }
 
         return binding.root
     }

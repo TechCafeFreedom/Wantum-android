@@ -10,7 +10,7 @@ import com.google.android.gms.tasks.Task
 import com.hadilq.liveevent.LiveEvent
 import com.techcafe.wantum.repository.AuthRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 @ExperimentalCoroutinesApi
@@ -18,7 +18,8 @@ class SignUpViewModel(
     private val authRepository: AuthRepository
 ) : ViewModel() {
 
-    private val _name = MutableStateFlow(authRepository.currentUser?.displayName ?: "no name")
+    val isSignIn = authRepository.isSignIn.asLiveData()
+    private val _name = authRepository.currentUser.map { it?.displayName ?: "no name" }
     val name: LiveData<String> = _name.asLiveData()
     val error = LiveEvent<Throwable>()
 
@@ -30,8 +31,13 @@ class SignUpViewModel(
             viewModelScope.launch {
                 authRepository.signInWithGoogle(token)
             }
-        }.onSuccess { _name.value = account.displayName ?: "nothing" }
-            .onFailure { error.value = it }
+        }.onFailure { error.value = it }
+    }
+
+    fun signOut() {
+        viewModelScope.launch {
+            authRepository.signOut()
+        }
     }
 }
 
