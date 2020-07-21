@@ -14,7 +14,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.techcafe.wantum.auth.databinding.FragmentSignUpBinding
 import com.techcafe.wantum.repository.impl.AuthRepositoryImpl
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalCoroutinesApi
 class SignUpFragment : Fragment() {
 
     companion object {
@@ -48,6 +50,9 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentSignUpBinding = FragmentSignUpBinding.inflate(inflater)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+
         binding.signUpWithGoogle.setOnClickListener { signInWithGoogle() }
 
         return binding.root
