@@ -7,6 +7,7 @@ import com.techcafe.wantum.repository.AuthRepository
 class AuthRepositoryImpl : AuthRepository {
     // TODO: FirebaseAuthをDIする
     private val firebaseAuth = FirebaseAuth.getInstance()
+    override val currentUser = firebaseAuth.currentUser
 
     override suspend fun signInWithGoogle(token: String) {
         val credential = GoogleAuthProvider.getCredential(token, null)

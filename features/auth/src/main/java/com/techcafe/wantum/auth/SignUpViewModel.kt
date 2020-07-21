@@ -18,7 +18,7 @@ class SignUpViewModel(
     private val authRepository: AuthRepository
 ) : ViewModel() {
 
-    private val _name = MutableStateFlow("no name")
+    private val _name = MutableStateFlow(authRepository.currentUser?.displayName ?: "no name")
     val name: LiveData<String> = _name.asLiveData()
     val error = LiveEvent<Throwable>()
 

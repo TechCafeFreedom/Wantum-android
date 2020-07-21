@@ -39,11 +39,6 @@ class SignUpFragment : Fragment() {
         handleSignInWithGoogleResult(resultCode = result.resultCode, data = result.data)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        // TODO: check current user
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
