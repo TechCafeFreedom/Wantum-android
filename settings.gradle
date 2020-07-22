@@ -1,2 +1,5 @@
-rootProject.name='wantum-android'
-include ':app'
+include ':app',
+        ':model',
+        ':data:repository',
+        ':features:settings',
+        ':core'
