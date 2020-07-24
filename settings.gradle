@@ -1,3 +1,6 @@
+include ':features:list'
+include ':features:timeline'
+include ':features:memories'
 include ':app',
         ':model',
         ':data:repository',
