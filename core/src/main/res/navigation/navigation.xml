@@ -6,16 +6,16 @@
 
     <fragment
         android:id="@+id/memories"
-        android:name="com.techcafe.wantum.MemoriesFragment"
+        android:name="com.techcafe.wantum.memories.MemoriesFragment"
         android:label="Memories" />
 
     <fragment
         android:id="@+id/timeline"
-        android:name="com.techcafe.wantum.TimelineFragment"
+        android:name="com.techcafe.wantum.timeline.TimelineFragment"
         android:label="Timeline" />
 
     <fragment
         android:id="@+id/list"
-        android:name="com.techcafe.wantum.ListFragment"
+        android:name="com.techcafe.wantum.list.ListFragment"
         android:label="List" />
 </navigation>

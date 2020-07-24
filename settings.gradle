@@ -1,8 +1,8 @@
-include ':features:list'
-include ':features:timeline'
-include ':features:memories'
 include ':app',
         ':model',
         ':data:repository',
         ':features:settings',
-        ':core'
+        ':core',
+        ':features:list',
+        ':features:timeline',
+        ':features:memories'
