@@ -26,6 +26,9 @@ android {
 }
 
 dependencies {
+    implementation project(':features:memories')
+    implementation project(':features:timeline')
+    implementation project(':features:list')
     implementation project(':core')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
