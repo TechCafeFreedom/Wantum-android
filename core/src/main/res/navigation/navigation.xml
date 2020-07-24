@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation">
-<!--    app:startDestination="">-->
+    android:id="@+id/navigation"
+    app:startDestination="@id/memories">
 
+    <fragment
+        android:id="@+id/memories"
+        android:name="com.techcafe.wantum.MemoriesFragment"
+        android:label="Memories" />
+
+    <fragment
+        android:id="@+id/timeline"
+        android:name="com.techcafe.wantum.TimelineFragment"
+        android:label="Timeline" />
+
+    <fragment
+        android:id="@+id/list"
+        android:name="com.techcafe.wantum.ListFragment"
+        android:label="List" />
 </navigation>
