@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.techcafe.wantum.repository.AuthRepository
 
-
 @Suppress("UNCHECKED_CAST")
 class SignUpViewModelFactory(
     private val repository: AuthRepository

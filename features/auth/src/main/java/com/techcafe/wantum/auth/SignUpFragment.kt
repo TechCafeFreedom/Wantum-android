@@ -52,11 +52,11 @@ class SignUpFragment : Fragment() {
         binding.signUpWithGoogle.setOnClickListener { signInWithGoogle() }
         binding.signOut.setOnClickListener { viewModel.signOut() }
 
-        viewModel.isSignIn.observe(viewLifecycleOwner){
+        viewModel.isSignIn.observe(viewLifecycleOwner) {
             // TODO: SignInしていたらfinishしてTop画面へ遷移する
         }
 
-        viewModel.error.observe(viewLifecycleOwner){
+        viewModel.error.observe(viewLifecycleOwner) {
             // TODO: SnackBarでerrorを表示する
         }
 

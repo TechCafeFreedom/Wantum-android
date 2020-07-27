@@ -2,7 +2,6 @@ package com.techcafe.wantum
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import com.techcafe.wantum.auth.SignUpFragment
 import com.techcafe.wantum.databinding.ActivityMainBinding
 
