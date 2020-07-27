@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="list">リスト</string>
+    <string name="timeline">タイムライン</string>
+    <string name="memories">思い出</string>
+</resources>

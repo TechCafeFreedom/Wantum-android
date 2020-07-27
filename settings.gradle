@@ -4,3 +4,5 @@ include ':app',
         ':features:settings',
         ':features:auth',
         ':core'
+||||||| 2feedac
+        ':core'
