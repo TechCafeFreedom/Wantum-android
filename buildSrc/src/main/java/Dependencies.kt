@@ -7,10 +7,12 @@ import org.gradle.kotlin.dsl.dependencies
 fun Project.baseDependencies(additionalConfiguration: DependencyHandlerScope.() -> Unit) {
     dependencies {
         implementation(Libs.Kotlin.stdlib)
+        implementation(Libs.Kotlin.coroutinesCore)
         implementation(Libs.AndroidX.appCompat)
         implementation(Libs.AndroidX.coreKtx)
         implementation(Libs.AndroidX.constraint)
     }
+    dependencies(additionalConfiguration)
 }
 
 fun Project.testDependencies() {

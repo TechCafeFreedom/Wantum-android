@@ -1,4 +1,5 @@
 import dependencies.baseExtension
+import dependencies.Libs
 
 plugins {
     id("com.android.library")
@@ -11,5 +12,9 @@ android {
 }
 
 baseDependencies {
+    implementation(project(":model"))
+
+    implementation(Libs.Firebase.auth)
+    implementation(Libs.Firebase.playServicesAuth)
 }
 testDependencies()
