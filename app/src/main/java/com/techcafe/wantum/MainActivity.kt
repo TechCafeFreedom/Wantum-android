@@ -1,10 +1,10 @@
 package com.techcafe.wantum
 
 import android.os.Bundle
-import androidx.navigation.fragment.NavHostFragment
-import kotlinx.android.synthetic.main.activity_main.*
-import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI.setupWithNavController
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
