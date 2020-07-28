@@ -20,6 +20,10 @@ object Libs {
         const val fragmentKts = "androidx.fragment:fragment-ktx:${Versions.fragment}"
         const val activityKts = "androidx.activity:activity-ktx:${Versions.activity}"
         const val liveDataKts = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+        const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:2.3.0"
+        const val navigationUi = "androidx.navigation:navigation-ui-ktx:2.3.0"
+        const val navigationRuntime = "androidx.navigation:navigation-runtime-ktx:2.3.0"
+
     }
 
     const val liveEvent = "com.github.hadilq.liveevent:liveevent:1.0.1"

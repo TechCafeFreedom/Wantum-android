@@ -1,4 +1,5 @@
 import dependencies.baseExtension
+import dependencies.Libs
 
 plugins {
     id("com.android.library")
@@ -11,5 +12,9 @@ android {
 }
 
 baseDependencies {
+    implementation(Libs.AndroidX.navigationFragment)
+    implementation(Libs.AndroidX.navigationUi)
+    implementation(Libs.AndroidX.navigationRuntime)
 }
+
 testDependencies()

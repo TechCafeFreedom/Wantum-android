@@ -3,15 +3,24 @@ import dependencies.BuildConfig
 import dependencies.Libs
 
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("com.google.gms.google-services")
 }
+
 android {
     baseExtension()
-    defaultConfig.applicationId = BuildConfig.applicationId
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
     @Suppress("UnstableApiUsage")
     buildFeatures {
