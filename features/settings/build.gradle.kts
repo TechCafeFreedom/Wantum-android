@@ -6,6 +6,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -22,6 +23,8 @@ android {
 }
 
 baseDependencies {
+    implementation(Libs.AndroidX.navFragmentKtx)
+
     implementation(Libs.Hilt.android)
     implementation(Libs.Hilt.common)
     implementation(Libs.Hilt.lifecycleViewModel)

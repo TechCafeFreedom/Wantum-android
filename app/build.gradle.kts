@@ -8,6 +8,7 @@ plugins {
     id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("com.google.gms.google-services")
+    id("dagger.hilt.android.plugin")
 }
 android {
     baseExtension()
