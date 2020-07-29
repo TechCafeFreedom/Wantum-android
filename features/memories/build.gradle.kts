@@ -1,5 +1,4 @@
 import dependencies.baseExtension
-import dependencies.BuildConfig
 import dependencies.Libs
 
 plugins {
@@ -7,7 +6,6 @@ plugins {
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
-    id("com.google.gms.google-services")
 }
 
 android {
