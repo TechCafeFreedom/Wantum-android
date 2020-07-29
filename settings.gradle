@@ -1,9 +1,0 @@
-include ':app',
-        ':model',
-        ':data:repository',
-        ':features:settings',
-        ':features:auth',
-        ':core',
-        ':features:list',
-        ':features:timeline',
-        ':features:memories'
