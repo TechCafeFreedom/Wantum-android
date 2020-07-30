@@ -6,6 +6,7 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+.idea/misc.xml
 .DS_Store
 /build
 /captures
@@ -84,6 +85,3 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 lint/reports/
-.idea/misc.xml
-.idea/misc.xml
-.idea/misc.xml
