@@ -8,6 +8,7 @@ plugins {
     id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("com.google.gms.google-services")
+    id("dagger.hilt.android.plugin")
 }
 android {
     baseExtension()
@@ -29,5 +30,15 @@ baseDependencies {
 
     implementation(Libs.AndroidX.fragmentKts)
     implementation(Libs.Firebase.analytics)
+    implementation(Libs.Hilt.android)
+    implementation(Libs.Hilt.common)
+    implementation(Libs.Hilt.lifecycleViewModel)
+
+    kapt(Libs.Hilt.compiler)
+    kapt(Libs.Hilt.androidCompiler)
 }
 testDependencies()
+
+kapt {
+    correctErrorTypes = true
+}

@@ -1,10 +1,12 @@
 package com.techcafe.wantum
 
 import android.os.Bundle
+import dagger.hilt.android.AndroidEntryPoint
 import androidx.appcompat.app.AppCompatActivity
 import com.techcafe.wantum.auth.SignUpFragment
 import com.techcafe.wantum.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
