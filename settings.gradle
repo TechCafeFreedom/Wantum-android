@@ -3,4 +3,5 @@ include ':app',
         ':data:repository',
         ':features:settings',
         ':features:auth',
-        ':core'
+        ':core',
+        ':features:resource'

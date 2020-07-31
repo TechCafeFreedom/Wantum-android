@@ -23,6 +23,7 @@ android {
 baseDependencies {
     implementation(project(":features:auth"))
     implementation(project(":features:settings"))
+    implementation(project(":features:resource"))
     implementation(project(":core"))
     implementation(project(":model"))
     implementation(project(":data:repository"))
