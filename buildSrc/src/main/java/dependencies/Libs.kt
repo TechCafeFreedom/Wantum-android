@@ -5,6 +5,9 @@ object Libs {
         const val kotlin = "1.3.72"
         const val fragment = "1.3.0-alpha06"
         const val activity = "1.2.0-alpha06"
+        const val navigation = "2.3.0"
+        const val hilt = "2.28-alpha"
+        const val hiltSnap = "1.0.0-SNAPSHOT"
     }
 
     object Kotlin {
@@ -20,10 +23,18 @@ object Libs {
         const val fragmentKts = "androidx.fragment:fragment-ktx:${Versions.fragment}"
         const val activityKts = "androidx.activity:activity-ktx:${Versions.activity}"
         const val liveDataKts = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
-        const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:2.3.0"
-        const val navigationUi = "androidx.navigation:navigation-ui-ktx:2.3.0"
-        const val navigationRuntime = "androidx.navigation:navigation-runtime-ktx:2.3.0"
+        const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+        const val navRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigation}"
+        const val navFragmentKtx =
+            "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    }
 
+    object Hilt {
+        const val android = "com.google.dagger:hilt-android:${Versions.hilt}"
+        const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+        const val common = "androidx.hilt:hilt-common:${Versions.hiltSnap}"
+        const val lifecycleViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltSnap}"
+        const val compiler = "androidx.hilt:hilt-common:${Versions.hiltSnap}"
     }
 
     const val liveEvent = "com.github.hadilq.liveevent:liveevent:1.0.1"
