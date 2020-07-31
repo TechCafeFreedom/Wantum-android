@@ -4,7 +4,6 @@
     android:id="@+id/navigation"
     app:startDestination="@id/memories">
 
-
     <fragment
         android:id="@+id/memories"
         android:name="com.techcafe.wantum.memories.MemoriesFragment"
@@ -17,7 +16,7 @@
 
     <fragment
         android:id="@+id/list"
-        android:name="com.techcafe.wantum.list.ListFragment"
+        android:name="com.techcafe.wantum.wannado.WannaDoFragment"
         android:label="List" />
 
     <fragment
