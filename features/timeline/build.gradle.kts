@@ -34,8 +34,8 @@ baseDependencies {
 
     implementation(Libs.AndroidX.fragmentKts)
     implementation(Libs.Firebase.analytics)
-    implementation(Libs.AndroidX.navigationFragment)
-    implementation(Libs.AndroidX.navigationUi)
-    implementation(Libs.AndroidX.navigationRuntime)
+    implementation(Libs.AndroidX.navFragmentKtx)
+    implementation(Libs.AndroidX.navUi)
+    implementation(Libs.AndroidX.navRuntime)
 }
 testDependencies()
