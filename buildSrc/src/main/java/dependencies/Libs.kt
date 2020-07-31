@@ -23,7 +23,8 @@ object Libs {
         const val fragmentKts = "androidx.fragment:fragment-ktx:${Versions.fragment}"
         const val activityKts = "androidx.activity:activity-ktx:${Versions.activity}"
         const val liveDataKts = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
-
+        const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+        const val navRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigation}"
         const val navFragmentKtx =
             "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     }

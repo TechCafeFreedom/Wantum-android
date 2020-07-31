@@ -5,6 +5,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-android-extensions")
+    id("kotlin-kapt")
 }
 
 android {
@@ -27,9 +28,14 @@ android {
 }
 
 baseDependencies {
+    implementation(project(":core"))
+    implementation(project(":model"))
+    implementation(project(":data:repository"))
+
+    implementation(Libs.AndroidX.fragmentKts)
+    implementation(Libs.Firebase.analytics)
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)
     implementation(Libs.AndroidX.navRuntime)
 }
-
 testDependencies()

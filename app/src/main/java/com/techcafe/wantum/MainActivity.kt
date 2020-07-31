@@ -1,10 +1,12 @@
 package com.techcafe.wantum
 
 import android.os.Bundle
-import dagger.hilt.android.AndroidEntryPoint
 import androidx.appcompat.app.AppCompatActivity
-import com.techcafe.wantum.auth.SignUpFragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.techcafe.wantum.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -13,13 +15,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // TODO AuthFragmentからの遷移
+//        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+//        supportFragmentManager.beginTransaction().also {
+//            it.replace(binding.navHostFragment.id, SignUpFragment.newInstance())
+//            it.commitNow()
 
-        supportFragmentManager.beginTransaction().also {
-            it.replace(binding.fragmentContainer.id, SignUpFragment.newInstance())
-            it.commitNow()
-        }
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        setupWithNavController(bottom_navigation_view, navController)
+//        }
     }
 }
