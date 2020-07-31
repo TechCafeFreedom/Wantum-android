@@ -1,11 +1,11 @@
 package com.techcafe.wantum
 
 import android.os.Bundle
-import dagger.hilt.android.AndroidEntryPoint
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.techcafe.wantum.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
