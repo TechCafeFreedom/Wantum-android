@@ -1,5 +1,5 @@
-@EpoxyDataBindingLayouts({R.layout.wanna_do_item})
-package com.techcafe.wantum.wannado;
-import com.airbnb.epoxy.EpoxyDataBindingLayouts;
-import com.techcafe.wantum.wannado.R;
+@EpoxyDataBindingPattern(rClass = R.class,layoutPrefix = "wanna_")
 
+package com.techcafe.wantum.wannado;
+
+import com.airbnb.epoxy.EpoxyDataBindingPattern;

@@ -1,23 +1,22 @@
 package com.techcafe.wantum.wannado
 
-import com.airbnb.epoxy.Typed2EpoxyController
+import com.airbnb.epoxy.TypedEpoxyController
 
 class WannaDoDataBindingViewController(
     private val clickListener: ClickListener
-) : Typed2EpoxyController<List<String>, Boolean>() {
+) : TypedEpoxyController<List<String>>() {
 
-    override fun buildModels(titles: List<String>, loadingMore: Boolean) {
-        titles.forEach { title ->
-
-/*
-                id("content")
-                titleXml(title)
-                onClickListener(View.OnClickListener { clickListener.onClicked(title) })
-*/
+    override fun buildModels(titles: List<String>) {
+        titles.forEachIndexed { index, title ->
+            doItem {
+                id("$index")
+                title(title)
+                onClickListener { _ -> clickListener.onClicked(title) }
+            }
         }
     }
 
-    interface ClickListener{
+    interface ClickListener {
         fun onClicked(item: String)
     }
 }

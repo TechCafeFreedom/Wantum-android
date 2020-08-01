@@ -9,17 +9,17 @@ import kotlinx.android.synthetic.main.fragment_wanna_do.*
 
 class WannaDoFragment : Fragment(R.layout.fragment_wanna_do) {
     private val toDoList = listOf<String>(
-        "オンラインデート",
-        "オフライン飲み会",
-        "ディズニーランド",
-        "富士山",
-        "アメリカに行く",
-        "オンラインデート",
-        "オフライン飲み会",
-        "ディズニーランド",
-        "富士山",
-        "アメリカに行く",
-        "社長になる"
+        "1オンラインデート",
+        "2オフライン飲み会",
+        "3ディズニーランド",
+        "4富士山",
+        "5アメリカに行く",
+        "6オンラインデート",
+        "7オフライン飲み会",
+        "8ディズニーランド",
+        "9富士山",
+        "10アメリカに行く",
+        "11社長になる"
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,6 +39,6 @@ class WannaDoFragment : Fragment(R.layout.fragment_wanna_do) {
             }
         }
 
-        wishListDataBindingViewController.setData(toDoList, false)
+        wishListDataBindingViewController.setData(toDoList)
     }
 }

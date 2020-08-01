@@ -17,6 +17,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wanna_do_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_item_background_line"
@@ -36,6 +37,7 @@
             android:id="@+id/tag_img"
             android:layout_width="wrap_content"
             android:layout_height="64dp"
+            android:onClick="@{onClickListener}"
             android:background="@drawable/ic_tag_long"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tag_color"
