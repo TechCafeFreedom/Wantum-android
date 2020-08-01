@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextDarkBlueBold">
+        <item name="android:elevation">8dp</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ButtonCreamBold">
+        <item name="android:elevation">8dp</item>
+        <item name="android:textColor">@color/cream</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

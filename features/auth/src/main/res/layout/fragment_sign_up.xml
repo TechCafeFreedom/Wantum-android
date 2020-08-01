@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -30,24 +29,23 @@
             android:id="@+id/google_image"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="26dp"
             android:layout_marginBottom="4dp"
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/sign_up_with_google"
-            app:srcCompat="@drawable/login_button_google"
-            tools:layout_editor_absoluteX="9dp" />
+            app:srcCompat="@drawable/login_button_google" />
 
         <Button
             android:id="@+id/sign_up_with_google"
+            style="@style/ButtonCreamBold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/login_button_flame"
-            android:text="Googleアカウントでログイン"
-            android:textColor="@color/cream"
-            android:textStyle="bold"
+            android:text="@string/sign_up_google"
             app:layout_constraintBottom_toTopOf="@id/sign_out"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -56,15 +54,16 @@
             android:id="@+id/mail_image"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="26dp"
             android:layout_marginBottom="4dp"
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/sign_out"
-            app:srcCompat="@drawable/login_button_mail"
-            tools:layout_editor_absoluteX="9dp" />
+            app:srcCompat="@drawable/login_button_mail" />
 
         <Button
             android:id="@+id/sign_out"
+            style="@style/ButtonCreamBold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -72,22 +71,18 @@
             android:layout_marginBottom="32dp"
             android:background="@drawable/login_button_flame"
             android:onClick="@{() -> viewModel.signOut()}"
-            android:text="メールアドレスでログイン(Sign Out)"
-            android:textColor="@color/cream"
-            android:textStyle="bold"
+            android:text="@string/sign_up_mail"
             app:layout_constraintBottom_toTopOf="@+id/create_account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/create_account"
+            style="@style/TextDarkBlueBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="64dp"
-            android:elevation="8dp"
-            android:text="会員登録はこちら"
-            android:textColor="#516266"
-            android:textStyle="bold"
+            android:text="@string/member_registration"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

@@ -12,4 +12,3 @@ android {
 
 baseDependencies {
 }
-testDependencies()
