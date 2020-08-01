@@ -8,6 +8,7 @@ object Libs {
         const val navigation = "2.3.0"
         const val hilt = "2.28-alpha"
         const val hiltSnap = "1.0.0-SNAPSHOT"
+        const val epoxy = "3.11.0"
     }
 
     object Kotlin {
@@ -50,5 +51,10 @@ object Libs {
         const val analytics = "com.google.firebase:firebase-analytics:17.4.4"
         const val auth = "com.google.firebase:firebase-auth:19.3.2"
         const val playServicesAuth = "com.google.android.gms:play-services-auth:18.1.0"
+    }
+    object Epoxy {
+        const val epoxy = "com.airbnb.android:epoxy:${Versions.epoxy}"
+        const val dataBinding = "com.airbnb.android:epoxy-databinding:${Versions.epoxy}"
+        const val processor = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
     }
 }

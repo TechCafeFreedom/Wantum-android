@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="onClickListener"
+            type="View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_item_background_line"
+        android:paddingVertical="16dp"
+        android:paddingStart="32dp">
+
+        <FrameLayout
+            android:id="@+id/tag_color"
+            android:layout_width="12dp"
+            android:layout_height="0dp"
+            android:background="#A9CAAF"
+            app:layout_constraintBottom_toBottomOf="@id/tag_img"
+            app:layout_constraintHeight_percent="0.89"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/tag_img"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:background="@drawable/ic_tag_long"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tag_color"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/wanna_do_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@{title}"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tag_img"
+            app:layout_constraintStart_toStartOf="@id/tag_img"
+            tools:text="text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

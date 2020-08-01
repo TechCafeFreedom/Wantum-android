@@ -37,5 +37,13 @@ baseDependencies {
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)
     implementation(Libs.AndroidX.navRuntime)
+    implementation(Libs.Epoxy.dataBinding)
+    implementation(Libs.Epoxy.epoxy)
+    kapt(Libs.Epoxy.processor)
+
 }
 testDependencies()
+kapt {
+    correctErrorTypes = true
+    showProcessorTimings = true
+}
