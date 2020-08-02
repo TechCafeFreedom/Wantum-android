@@ -75,12 +75,12 @@
             android:background="@drawable/login_button_mail"
             android:onClick="@{() -> viewModel.signOut()}"
             android:text="@string/sign_up_mail"
-            app:layout_constraintBottom_toTopOf="@+id/create_account"
+            app:layout_constraintBottom_toTopOf="@+id/text_sign_up_create_account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/create_account"
+            android:id="@+id/text_sign_up_create_account"
             style="@style/TextDarkBlueBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
