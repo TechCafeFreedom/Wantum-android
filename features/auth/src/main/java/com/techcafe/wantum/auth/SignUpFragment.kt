@@ -49,7 +49,7 @@ class SignUpFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        binding.signUpWithGoogle.setOnClickListener { signInWithGoogle() }
+        binding.buttonSignUpGoogle.setOnClickListener { signInWithGoogle() }
 
         viewModel.isSignIn.observe(viewLifecycleOwner) {
             // TODO: SignInしていたらfinishしてTop画面へ遷移する

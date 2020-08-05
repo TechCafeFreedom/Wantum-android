@@ -35,7 +35,7 @@
             android:importantForAccessibility="no"
             android:translationZ="3dp"
             app:layout_constraintTop_toTopOf="@+id/button_sign_up_google"
-            app:srcCompat="@drawable/login_button_flame" />
+            app:srcCompat="@drawable/button_flame" />
 
         <Button
             android:id="@+id/button_sign_up_google"
@@ -46,7 +46,6 @@
             android:layout_marginEnd="26dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/login_button_google"
-            android:foreground="?android:selectableItemBackground"
             android:text="@string/sign_up_google"
             app:layout_constraintBottom_toTopOf="@id/button_sign_up_with_mail"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +61,7 @@
             android:importantForAccessibility="no"
             android:translationZ="3dp"
             app:layout_constraintTop_toTopOf="@+id/button_sign_up_with_mail"
-            app:srcCompat="@drawable/login_button_flame" />
+            app:srcCompat="@drawable/button_flame" />
 
         <Button
             android:id="@+id/button_sign_up_with_mail"
