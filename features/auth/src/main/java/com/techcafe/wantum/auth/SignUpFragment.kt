@@ -30,7 +30,7 @@ class SignUpFragment : Fragment() {
     private val googleSignInOptions: GoogleSignInOptions by lazy {
         val signInOption = GoogleSignInOptions.DEFAULT_SIGN_IN
         GoogleSignInOptions.Builder(signInOption)
-            .requestIdToken(BuildConfig.REQUEST_ID_TOKEN)
+            .requestIdToken("1050487292220-51jgeg6stf1sluvsu1gi3t2onvl785ti.apps.googleusercontent.com")
             .requestEmail().build()
     }
 
