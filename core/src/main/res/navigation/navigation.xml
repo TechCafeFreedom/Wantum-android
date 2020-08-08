@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation"
-    app:startDestination="@id/wanna">
+    app:startDestination="@id/wannado">
 
     <fragment
         android:id="@+id/memories"
@@ -28,7 +28,7 @@
         android:name="com.techcafe.wantum.auth.SignUpFragment"
         android:label="Auth" />
     <fragment
-        android:id="@+id/wanna"
+        android:id="@+id/wannado"
         android:name="com.techcafe.wantum.wannado.WannaDoFragment"
-        android:label="Wanna"/>
+        android:label="WannaDo"/>
 </navigation>

@@ -28,7 +28,7 @@ class WannaDoFragment : Fragment(R.layout.fragment_wanna_do) {
         val wishListDataBindingViewController = WannaDoDataBindingViewController(object :
             WannaDoDataBindingViewController.ClickListener {
             override fun onClicked(item: String) {
-                Toast.makeText(context, "FuckYouNiwatori", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "$item is Clicked", Toast.LENGTH_SHORT).show()
             }
         })
 
