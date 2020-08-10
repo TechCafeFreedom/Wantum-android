@@ -40,7 +40,9 @@ android {
 
 baseDependencies {
     implementation(project(":data:repository"))
+    implementation(project(":features:resource"))
     implementation(project(":model"))
+    implementation(project(":core"))
 
     implementation(Libs.AndroidX.liveDataKts)
     implementation(Libs.liveEvent)
