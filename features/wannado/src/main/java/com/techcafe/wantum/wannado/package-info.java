@@ -1,4 +1,4 @@
-@EpoxyDataBindingPattern(rClass = R.class,layoutPrefix = "wanna_")
+@EpoxyDataBindingPattern(rClass = R.class,layoutPrefix = "item_")
 
 package com.techcafe.wantum.wannado;
 
