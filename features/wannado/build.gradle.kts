@@ -31,6 +31,7 @@ baseDependencies {
     implementation(project(":core"))
     implementation(project(":model"))
     implementation(project(":data:repository"))
+    implementation(project(":features:resource"))
 
     implementation(Libs.AndroidX.fragmentKts)
     implementation(Libs.Firebase.analytics)
