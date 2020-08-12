@@ -31,11 +31,20 @@ baseDependencies {
     implementation(project(":core"))
     implementation(project(":model"))
     implementation(project(":data:repository"))
+    implementation(project(":features:resource"))
 
     implementation(Libs.AndroidX.fragmentKts)
     implementation(Libs.Firebase.analytics)
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)
     implementation(Libs.AndroidX.navRuntime)
+    implementation(Libs.Epoxy.dataBinding)
+    implementation(Libs.Epoxy.epoxy)
+    kapt(Libs.Epoxy.processor)
+
 }
 testDependencies()
+kapt {
+    correctErrorTypes = true
+    showProcessorTimings = true
+}

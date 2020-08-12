@@ -7,9 +7,14 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="cream">#F7F0EA</color>
-    <color name="darkCream">#E7DED7</color>
+    <color name="dark_cream">#E7DED7</color>
     <color name="pink">#EBAC9A</color>
+    <color name="salmon_pink">#D67C73</color>
+    <color name="kirby_pink">#E8BAC2</color>
     <color name="yellow">#EDCD8F</color>
+    <color name="lemon_yellow">#EFCF90</color>
+    <color name="dark_blue">#516266</color>
+    <color name="sky_blue">#70A8BA</color>
     <color name="green">#9BBEA2</color>
-    <color name="darkBlue">#516266</color>
+    <color name="kiwi_green">#A9CAAF</color>
 </resources>

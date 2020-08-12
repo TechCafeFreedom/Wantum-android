@@ -41,6 +41,9 @@ baseDependencies {
     implementation(Libs.Hilt.lifecycleViewModel)
     kapt(Libs.Hilt.compiler)
     kapt(Libs.Hilt.androidCompiler)
+    implementation(Libs.Epoxy.dataBinding)
+    implementation(Libs.Epoxy.epoxy)
+    kapt(Libs.Epoxy.processor)
 }
 testDependencies()
 
