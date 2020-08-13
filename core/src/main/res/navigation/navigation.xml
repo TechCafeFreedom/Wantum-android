@@ -29,11 +29,19 @@
         android:label="Wannado">
         <action
             android:id="@+id/action_wannado_to_wannado_detail"
-            app:destination="@+id/wannado_detail" />
+            app:destination="@+id/wannado_detail">
+            <argument
+                android:name="wannado"
+                app:argType="string" />
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/wannado_detail"
         android:name="com.techcafe.wantum.wannado.WannadoDetailFragment"
-        android:label="WannadoDetail" />
+        android:label="WannadoDetail">
+        <argument
+            android:name="wannado"
+            app:argType="string" />
+    </fragment>
 </navigation>

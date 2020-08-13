@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.techcafe.wantum.wannado.databinding.FragmentWannadoDetailBinding
 
 class WannadoDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentWannadoDetailBinding
+    private val args: WannadoDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,7 +24,7 @@ class WannadoDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.toolBarWannadoDetail.textToolBarTitle.text = "やりたいことリスト詳細"
+        binding.toolBarWannadoDetail.textToolBarTitle.text = args.wannado
 
         binding.toolBarWannadoDetail.buttonToolBarBack.setOnClickListener {
             findNavController().popBackStack()
