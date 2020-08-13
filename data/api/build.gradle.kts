@@ -21,8 +21,8 @@ baseDependencies {
     implementation(Libs.Retrofit.converterMoshi)
     implementation(Libs.Moshi.moshi)
     implementation(Libs.Moshi.kotlin)
-    implementation(Libs.Hilt.common)
-    kapt(Libs.Hilt.compiler)
+    implementation(Libs.Hilt.android)
+    kapt(Libs.Hilt.androidCompiler)
 
 }
 testDependencies()
