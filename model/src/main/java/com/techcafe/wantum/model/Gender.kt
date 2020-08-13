@@ -5,10 +5,13 @@ enum class Gender(private val value: Int) {
     WOMAN(2),
     OTHER(3);
 
-    fun toInt() = this.value
-    fun fromInt(value: Int) = when (value) {
-        1 -> MAN
-        2 -> WOMAN
-        else -> OTHER
+    companion object {
+        fun of(value: Int) = when (value) {
+            1 -> MAN
+            2 -> WOMAN
+            else -> OTHER
+        }
     }
+
+    fun toInt() = this.value
 }

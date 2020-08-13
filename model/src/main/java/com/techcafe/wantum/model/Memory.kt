@@ -1,5 +1,7 @@
 package com.techcafe.wantum.model
 
+import java.util.*
+
 data class Memory(
     val id: Int,
     val date: String,
@@ -9,5 +11,5 @@ data class Memory(
     val photos: List<Photo>,
     val tags: List<Tag>,
     val author: User,
-    val createdAt: String
+    val createdAt: Date
 )
