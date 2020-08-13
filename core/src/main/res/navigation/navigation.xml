@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation"
-    app:startDestination="@id/wannado">
+    app:startDestination="@id/memories">
 
     <fragment
         android:id="@+id/memories"
@@ -19,25 +19,21 @@
         android:label="Timeline" />
 
     <fragment
-        android:id="@+id/list"
-        android:name="com.techcafe.wantum.wannado.WannaDoFragment"
-        android:label="List" />
-
-    <fragment
         android:id="@+id/auth"
         android:name="com.techcafe.wantum.auth.SignUpFragment"
         android:label="Auth" />
+
     <fragment
         android:id="@+id/wannado"
         android:name="com.techcafe.wantum.wannado.WannaDoFragment"
         android:label="WannaDo">
         <action
-            android:id="@+id/action_wanna_do_to_wanna_do_detail"
-            app:destination="@+id/wanna_do_detail" />
+            android:id="@+id/action_wannado_to_wannado_detail"
+            app:destination="@+id/wannado_detail" />
     </fragment>
 
     <fragment
-        android:id="@+id/wanna_do_detail"
+        android:id="@+id/wannado_detail"
         android:name="com.techcafe.wantum.wannado.WannaDoDetailFragment"
         android:label="WannaDoDetail" />
 </navigation>

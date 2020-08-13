@@ -12,7 +12,7 @@
         android:title="@string/timeline" />
 
     <item
-        android:id="@+id/list"
+        android:id="@+id/wannado"
         android:icon="@drawable/ic_baseline_list_alt_24"
         android:title="@string/list" />
 </menu>

@@ -45,7 +45,7 @@ class WannaDoFragment : Fragment() {
         val wishListDataBindingViewController = WannaDoDataBindingViewController(object :
             WannaDoDataBindingViewController.ClickListener {
             override fun onClicked(item: String) {
-                findNavController().navigate(R.id.action_wanna_do_to_wanna_do_detail)
+                findNavController().navigate(R.id.action_wannado_to_wannado_detail)
                 Toast.makeText(context, "$item is Clicked", Toast.LENGTH_SHORT).show()
             }
         })
