@@ -9,6 +9,9 @@ object Libs {
         const val hilt = "2.28-alpha"
         const val hiltSnap = "1.0.0-SNAPSHOT"
         const val epoxy = "3.11.0"
+        const val okHttp = "4.8.1"
+        const val retrofit = "2.9.0"
+        const val moshi = "1.9.3"
     }
 
     object Kotlin {
@@ -52,9 +55,25 @@ object Libs {
         const val auth = "com.google.firebase:firebase-auth:19.3.2"
         const val playServicesAuth = "com.google.android.gms:play-services-auth:18.1.0"
     }
+
     object Epoxy {
         const val epoxy = "com.airbnb.android:epoxy:${Versions.epoxy}"
         const val dataBinding = "com.airbnb.android:epoxy-databinding:${Versions.epoxy}"
         const val processor = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
+    }
+
+    object OkHttp {
+        const val client = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
+        const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
+    }
+
+    object Retrofit {
+        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+        const val converterMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    }
+
+    object Moshi {
+        const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
+        const val kotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
     }
 }
