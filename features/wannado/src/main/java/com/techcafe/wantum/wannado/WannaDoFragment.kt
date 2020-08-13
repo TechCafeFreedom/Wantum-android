@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.techcafe.wantum.wannado.databinding.FragmentWannaDoBinding
 import kotlinx.android.synthetic.main.fragment_wanna_do.*
@@ -43,6 +45,7 @@ class WannaDoFragment : Fragment() {
         val wishListDataBindingViewController = WannaDoDataBindingViewController(object :
             WannaDoDataBindingViewController.ClickListener {
             override fun onClicked(item: String) {
+                findNavController().navigate(R.id.action_wanna_do_to_wanna_do_detail)
                 Toast.makeText(context, "$item is Clicked", Toast.LENGTH_SHORT).show()
             }
         })

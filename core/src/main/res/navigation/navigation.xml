@@ -21,7 +21,8 @@
     <fragment
         android:id="@+id/list"
         android:name="com.techcafe.wantum.wannado.WannaDoFragment"
-        android:label="List" />
+        android:label="List" >
+    </fragment>
 
     <fragment
         android:id="@+id/auth"
@@ -30,5 +31,14 @@
     <fragment
         android:id="@+id/wannado"
         android:name="com.techcafe.wantum.wannado.WannaDoFragment"
-        android:label="WannaDo"/>
+        android:label="WannaDo" >
+        <action
+            android:id="@+id/action_wanna_do_to_wanna_do_detail"
+            app:destination="@+id/wanna_do_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wanna_do_detail"
+        android:name="com.techcafe.wantum.wannado.WannaDoDetailFragment"
+        android:label="WannaDoDetail" />
 </navigation>
