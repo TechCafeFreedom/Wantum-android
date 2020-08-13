@@ -6,15 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.techcafe.wantum.wannado.databinding.FragmentWannaDoBinding
-import kotlinx.android.synthetic.main.fragment_wanna_do.*
+import com.techcafe.wantum.wannado.databinding.FragmentWannadoBinding
 
-class WannaDoFragment : Fragment() {
+class WannadoFragment : Fragment() {
 
-    private lateinit var binding: FragmentWannaDoBinding
+    private lateinit var binding: FragmentWannadoBinding
 
     private val toDoList = listOf<String>(
         "1オンラインデート",
@@ -35,22 +33,22 @@ class WannaDoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentWannaDoBinding.inflate(inflater, container, false)
+        binding = FragmentWannadoBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val wishListDataBindingViewController = WannaDoDataBindingViewController(object :
-            WannaDoDataBindingViewController.ClickListener {
+        val wishListDataBindingViewController = WannadoDataBindingViewController(object :
+            WannadoDataBindingViewController.ClickListener {
             override fun onClicked(item: String) {
                 findNavController().navigate(R.id.action_wannado_to_wannado_detail)
                 Toast.makeText(context, "$item is Clicked", Toast.LENGTH_SHORT).show()
             }
         })
 
-        binding.recyclerViewWannaDo.apply {
+        binding.recyclerViewWannado.apply {
             adapter = wishListDataBindingViewController.adapter
             layoutManager = LinearLayoutManager(context).apply {
                 orientation = LinearLayoutManager.VERTICAL

@@ -2,7 +2,7 @@ package com.techcafe.wantum.wannado
 
 import com.airbnb.epoxy.TypedEpoxyController
 
-class WannaDoDataBindingViewController(
+class WannadoDataBindingViewController(
     private val clickListener: ClickListener
 ) : TypedEpoxyController<List<String>>() {
 

@@ -25,8 +25,8 @@
 
     <fragment
         android:id="@+id/wannado"
-        android:name="com.techcafe.wantum.wannado.WannaDoFragment"
-        android:label="WannaDo">
+        android:name="com.techcafe.wantum.wannado.WannadoFragment"
+        android:label="Wannado">
         <action
             android:id="@+id/action_wannado_to_wannado_detail"
             app:destination="@+id/wannado_detail" />
@@ -34,6 +34,6 @@
 
     <fragment
         android:id="@+id/wannado_detail"
-        android:name="com.techcafe.wantum.wannado.WannaDoDetailFragment"
-        android:label="WannaDoDetail" />
+        android:name="com.techcafe.wantum.wannado.WannadoDetailFragment"
+        android:label="WannadoDetail" />
 </navigation>

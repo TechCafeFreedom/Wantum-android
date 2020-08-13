@@ -1,30 +1,30 @@
 package com.techcafe.wantum.wannado
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.techcafe.wantum.wannado.databinding.FragmentWannaDoDetailBinding
+import com.techcafe.wantum.wannado.databinding.FragmentWannadoDetailBinding
 
-class WannaDoDetailFragment : Fragment() {
+class WannadoDetailFragment : Fragment() {
 
-    private lateinit var binding: FragmentWannaDoDetailBinding
+    private lateinit var binding: FragmentWannadoDetailBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentWannaDoDetailBinding.inflate(inflater, container, false)
+        binding = FragmentWannadoDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.toolBarWannaDoDetail.textToolBarTitle.text = "やりたいことリスト詳細"
+        binding.toolBarWannadoDetail.textToolBarTitle.text = "やりたいことリスト詳細"
 
-        binding.toolBarWannaDoDetail.buttonToolBarBack.setOnClickListener {
+        binding.toolBarWannadoDetail.buttonToolBarBack.setOnClickListener {
             findNavController().popBackStack()
         }
     }
