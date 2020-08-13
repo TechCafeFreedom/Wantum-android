@@ -27,6 +27,8 @@ android {
 }
 
 baseDependencies {
+    implementation(project(":features:resource"))
+
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)
     implementation(Libs.AndroidX.navRuntime)

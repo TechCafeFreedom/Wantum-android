@@ -21,8 +21,7 @@
     <fragment
         android:id="@+id/list"
         android:name="com.techcafe.wantum.wannado.WannaDoFragment"
-        android:label="List" >
-    </fragment>
+        android:label="List" />
 
     <fragment
         android:id="@+id/auth"
@@ -31,7 +30,7 @@
     <fragment
         android:id="@+id/wannado"
         android:name="com.techcafe.wantum.wannado.WannaDoFragment"
-        android:label="WannaDo" >
+        android:label="WannaDo">
         <action
             android:id="@+id/action_wanna_do_to_wanna_do_detail"
             app:destination="@+id/wanna_do_detail" />
