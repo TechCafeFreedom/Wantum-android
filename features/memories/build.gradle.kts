@@ -6,6 +6,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 apply{
@@ -41,5 +42,10 @@ baseDependencies {
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)
     implementation(Libs.AndroidX.navRuntime)
+    implementation(Libs.Hilt.android)
+    implementation(Libs.Hilt.common)
+    implementation(Libs.Hilt.lifecycleViewModel)
+    kapt(Libs.Hilt.androidCompiler)
+    kapt(Libs.Hilt.compiler)
 }
 testDependencies()
