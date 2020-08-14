@@ -35,7 +35,7 @@ object Libs {
         const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
         const val common = "androidx.hilt:hilt-common:${Versions.hiltSnap}"
         const val lifecycleViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltSnap}"
-        const val compiler = "androidx.hilt:hilt-common:${Versions.hiltSnap}"
+        const val compiler = "androidx.hilt:hilt-compiler:${Versions.hiltSnap}"
     }
 
     const val liveEvent = "com.github.hadilq.liveevent:liveevent:1.0.1"
