@@ -6,7 +6,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:paddingHorizontal="16dp">
+        android:paddingHorizontal="8dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -14,9 +14,9 @@
 
             <ImageButton
                 android:id="@+id/button_tool_bar_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_baseline_menu_book_24"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_back"
                 android:importantForAccessibility="no"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -26,21 +26,21 @@
                 android:id="@+id/text_tool_bar_title"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="32dp"
-                android:gravity="center"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
                 android:singleLine="true"
                 android:textAppearance="@style/Text.Black.Bold.Toolbar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/button_tool_bar_share"
                 app:layout_constraintStart_toEndOf="@+id/button_tool_bar_back"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="オンラインデート" />
+                tools:text="オンラインデートオンラインデートオンラインデート" />
 
             <ImageButton
                 android:id="@+id/button_tool_bar_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_baseline_menu_book_24"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_more"
                 android:importantForAccessibility="no"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -48,9 +48,10 @@
 
             <ImageButton
                 android:id="@+id/button_tool_bar_share"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_baseline_menu_book_24"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_share"
                 android:importantForAccessibility="no"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/button_tool_bar_more"

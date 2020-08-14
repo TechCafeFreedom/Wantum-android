@@ -11,7 +11,7 @@
 
         <include
             android:id="@+id/tool_bar_wannado_detail"
-            layout="@layout/tool_bar"
+            layout="@layout/tool_bar_chel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
