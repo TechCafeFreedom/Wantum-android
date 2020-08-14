@@ -1,7 +1,9 @@
 package com.techcafe.wantum.auth
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,8 +31,10 @@ class SignUpFragment : Fragment() {
 
     private val googleSignInOptions: GoogleSignInOptions by lazy {
         val signInOption = GoogleSignInOptions.DEFAULT_SIGN_IN
+        val pref = this.activity?.getSharedPreferences("my_settings", Context.MODE_PRIVATE)
+        val stringValue = pref?.getString("stringValue", "")
         GoogleSignInOptions.Builder(signInOption)
-            .requestIdToken("1050487292220-51jgeg6stf1sluvsu1gi3t2onvl785ti.apps.googleusercontent.com")
+            .requestIdToken(stringValue)
             .requestEmail().build()
     }
 
@@ -49,7 +53,7 @@ class SignUpFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        binding.signUpWithGoogle.setOnClickListener { signInWithGoogle() }
+        binding.buttonSignUpGoogle.setOnClickListener { signInWithGoogle() }
 
         viewModel.isSignIn.observe(viewLifecycleOwner) {
             // TODO: SignInしていたらfinishしてTop画面へ遷移する

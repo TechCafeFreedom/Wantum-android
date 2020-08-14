@@ -1,5 +1,6 @@
 package com.techcafe.wantum
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
@@ -28,5 +29,10 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         setupWithNavController(bottom_navigation_view, navController)
 //        }
+
+        getSharedPreferences("my_settings", Context.MODE_PRIVATE).edit().apply {
+            putString("stringValue", getString(R.string.default_web_client_id))
+            commit()
+        }
     }
 }
