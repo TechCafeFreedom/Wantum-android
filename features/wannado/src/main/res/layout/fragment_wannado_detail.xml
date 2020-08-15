@@ -10,7 +10,7 @@
         tools:context=".WannadoDetailFragment">
 
         <include
-            android:id="@+id/tool_bar_wannado_detail"
+            android:id="@+id/tool_bar_chel_wannado_detail"
             layout="@layout/tool_bar_chel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tool_bar_wannado_detail" />
+            app:layout_constraintTop_toBottomOf="@id/tool_bar_chel_wannado_detail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

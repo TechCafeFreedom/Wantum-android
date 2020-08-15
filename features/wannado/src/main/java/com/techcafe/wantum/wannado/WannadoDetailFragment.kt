@@ -24,9 +24,10 @@ class WannadoDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.toolBarWannadoDetail.textToolBarTitle.text = args.wannado
-
-        binding.toolBarWannadoDetail.buttonToolBarBack.setOnClickListener {
+        binding.toolBarChelWannadoDetail.title = args.wannado
+        binding.toolBarChelWannadoDetail.isShowMore = true
+        binding.toolBarChelWannadoDetail.isShowShare = true
+        binding.toolBarChelWannadoDetail.buttonToolBarBack.setOnClickListener {
             findNavController().popBackStack()
         }
     }

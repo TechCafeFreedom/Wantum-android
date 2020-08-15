@@ -8,6 +8,12 @@ plugins {
 
 android {
     baseExtension()
+
+    @Suppress("UnstableApiUsage")
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
 }
 
 baseDependencies {
