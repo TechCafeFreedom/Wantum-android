@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // TODO AuthFragmentからの遷移
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(R.layout.activity_main)
 
 //        supportFragmentManager.beginTransaction().also {
 //            it.replace(binding.navHostFragment.id, SignUpFragment.newInstance())
