@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setupWithNavController(binding.bottomNavigationView, navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            binding.bottomNavigationView.isVisible = when(destination.id) {
+            binding.bottomNavigationView.isVisible = when (destination.id) {
                 R.id.wannado_detail -> false
                 else -> true
             }

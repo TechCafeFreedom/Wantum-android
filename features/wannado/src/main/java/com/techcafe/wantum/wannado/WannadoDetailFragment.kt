@@ -28,7 +28,8 @@ class WannadoDetailFragment : Fragment(), OnClickToolbarItemListener {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentWannadoDetailBinding.inflate(inflater, container, false)

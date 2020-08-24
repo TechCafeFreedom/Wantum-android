@@ -40,12 +40,12 @@ class WannadoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val wishListDataBindingViewController = WannadoDataBindingViewController(object :
-            WannadoDataBindingViewController.ClickListener {
-            override fun onClicked(item: String) {
-                val action = WannadoFragmentDirections.actionWannadoToWannadoDetail(item)
-                findNavController().navigate(action)
-            }
-        })
+                WannadoDataBindingViewController.ClickListener {
+                override fun onClicked(item: String) {
+                    val action = WannadoFragmentDirections.actionWannadoToWannadoDetail(item)
+                    findNavController().navigate(action)
+                }
+            })
 
         binding.recyclerViewWannado.apply {
             adapter = wishListDataBindingViewController.adapter

@@ -8,7 +8,7 @@ class WannadoDataBindingViewController(
 
     override fun buildModels(titles: List<String>) {
         titles.forEachIndexed { index, title ->
-            wannaDo{
+            wannaDo {
                 id("$index")
                 title(title)
                 onClickListener { _ -> clickListener.onClicked(title) }
