@@ -7,12 +7,25 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.techcafe.wantum.resource.OnClickToolbarItemListener
 import com.techcafe.wantum.wannado.databinding.FragmentWannadoDetailBinding
 
-class WannadoDetailFragment : Fragment() {
+class WannadoDetailFragment : Fragment(), OnClickToolbarItemListener {
 
     private lateinit var binding: FragmentWannadoDetailBinding
     private val args: WannadoDetailFragmentArgs by navArgs()
+
+    override fun onBackClick() {
+        findNavController().popBackStack()
+    }
+
+    override fun onMoreClick() {
+        // TODO Moreボタンタップされたときの処理
+    }
+
+    override fun onShareClick() {
+        // TODO Shareボタンタップされたときの処理
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,8 +40,9 @@ class WannadoDetailFragment : Fragment() {
         binding.toolBarChelWannadoDetail.title = args.wannado
         binding.toolBarChelWannadoDetail.isShowMore = true
         binding.toolBarChelWannadoDetail.isShowShare = true
-        binding.toolBarChelWannadoDetail.buttonToolBarBack.setOnClickListener {
-            findNavController().popBackStack()
-        }
+        binding.toolBarChelWannadoDetail.listener = this
+//        binding.toolBarChelWannadoDetail.buttonToolBarBack.setOnClickListener {
+//            findNavController().popBackStack()
+//        }
     }
 }

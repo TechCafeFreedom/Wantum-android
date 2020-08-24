@@ -18,6 +18,10 @@
         <variable
             name="isShowMore"
             type="Boolean" />
+
+        <variable
+            name="listener"
+            type="com.techcafe.wantum.resource.OnClickToolbarItemListener" />
     </data>
 
     <androidx.appcompat.widget.Toolbar
@@ -35,6 +39,7 @@
                 android:layout_height="32dp"
                 android:background="@drawable/bg_ripple_effect"
                 android:importantForAccessibility="no"
+                android:onClick="@{() -> listener.onBackClick()}"
                 android:src="@drawable/ic_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +66,7 @@
                 android:layout_height="32dp"
                 android:background="@drawable/bg_ripple_effect"
                 android:importantForAccessibility="no"
+                android:onClick="@{() -> listener.onMoreClick()}"
                 android:src="@drawable/ic_more"
                 android:visibility="@{isShowMore ? View.VISIBLE : View.GONE}"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -74,6 +80,7 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_ripple_effect"
                 android:importantForAccessibility="no"
+                android:onClick="@{() -> listener.onShareClick()}"
                 android:src="@drawable/ic_share"
                 android:visibility="@{isShowShare ? View.VISIBLE : View.GONE}"
                 app:layout_constraintBottom_toBottomOf="parent"
