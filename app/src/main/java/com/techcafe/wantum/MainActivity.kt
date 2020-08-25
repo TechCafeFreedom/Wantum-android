@@ -2,17 +2,28 @@ package com.techcafe.wantum
 
 import android.content.Context
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
+import com.techcafe.wantum.auth.SignUpViewModel
+import com.techcafe.wantum.auth.SignUpViewModelFactory
 import com.techcafe.wantum.databinding.ActivityMainBinding
+import com.techcafe.wantum.repository.impl.AuthRepositoryImpl
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private val viewModel: MainViewModel by lazy {
+        ViewModelProvider.NewInstanceFactory().create(MainViewModel::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,5 +45,9 @@ class MainActivity : AppCompatActivity() {
             putString("stringValue", getString(R.string.default_web_client_id))
             commit()
         }
+    }
+
+    private fun getWebClientId() {
+        viewModel.getWebClientId(getString(R.string.default_web_client_id))
     }
 }
