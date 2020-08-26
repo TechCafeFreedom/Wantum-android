@@ -9,6 +9,10 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
+apply{
+    file("gradle/projectDependencyGraph.gradle")
+}
+
 android {
     baseExtension()
 

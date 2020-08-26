@@ -10,6 +10,10 @@ plugins {
     id("kotlin-kapt")
 }
 
+apply{
+    file("gradle/projectDependencyGraph.gradle")
+}
+
 android {
     baseExtension()
 
