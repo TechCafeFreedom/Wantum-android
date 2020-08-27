@@ -1,0 +1,17 @@
+#!/bin/sh
+./gradlew ktlintPrePush > /dev/null 2>&1 & pid=$!
+spin='-\|/'
+i=0
+while kill -0 $pid 2>/dev/null
+do
+  i=$(( (i+1)%4 ))
+  printf "\rrun ktlint.. ${spin:$i:1}"
+  sleep .1
+done
+wait $pid
+result=$?
+echo ""
+if [ $result -ne 0 ]; then
+  printf "\e[33mwarning: Incorrect code format found. Run './gradlew ktlintFormat'.\e[m\n"
+fi
+exit $result
