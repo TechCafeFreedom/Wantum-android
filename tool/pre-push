@@ -15,3 +15,5 @@ if [ $result -ne 0 ]; then
   printf "\e[33mwarning: Incorrect code format found. Run './gradlew ktlintFormat'.\e[m\n"
 fi
 exit $result
+
+aa
