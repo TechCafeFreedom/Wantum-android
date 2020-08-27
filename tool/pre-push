@@ -1,5 +1,5 @@
 #!/bin/sh
-./gradlew ktlintPrePush > /dev/null 2>&1 & pid=$!
+./gradlew ktlintMain > /dev/null 2>&1 & pid=$!
 spin='-\|/'
 i=0
 while kill -0 $pid 2>/dev/null
@@ -15,5 +15,3 @@ if [ $result -ne 0 ]; then
   printf "\e[33mwarning: Incorrect code format found. Run './gradlew ktlintFormat'.\e[m\n"
 fi
 exit $result
-
-aa
