@@ -10,6 +10,11 @@ plugins {
     id("com.google.gms.google-services")
     id("dagger.hilt.android.plugin")
 }
+
+apply{
+    file("gradle/projectDependencyGraph.gradle")
+}
+
 android {
     baseExtension()
     defaultConfig.applicationId = BuildConfig.applicationId
