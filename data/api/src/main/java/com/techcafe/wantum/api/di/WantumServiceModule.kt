@@ -12,13 +12,12 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
-import javax.inject.Named
 
 @Module
 @InstallIn(ApplicationComponent::class)
 class WantumServiceModule {
     companion object {
-        private const val mockUrl = "https://stoplight.io/p/mocks/13862/149690"
+        private const val mockUrl = "https://stoplight.io/p/mocks/13862/149690/"
     }
     @Provides
     fun provideMoshi(): Moshi = Moshi.Builder()
@@ -27,7 +26,7 @@ class WantumServiceModule {
 
     // TODO: debug variantのみLoggingを出す
     @Provides
-    fun provideOkHttp() = OkHttpClient.Builder()
+    fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
         .readTimeout(300, TimeUnit.SECONDS)
         .connectTimeout(300, TimeUnit.SECONDS)
         .addInterceptor(HttpLoggingInterceptor().apply {
@@ -36,11 +35,10 @@ class WantumServiceModule {
         .build()
 
     // TODO: baseUrlをConstに定義する
-    @Named("mock")
     @Provides
     fun provideMockRetrofit(
         moshi: Moshi
-    ) = Retrofit.Builder()
+    ): Retrofit = Retrofit.Builder()
         .baseUrl(mockUrl)
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
@@ -48,5 +46,5 @@ class WantumServiceModule {
     @Provides
     fun provideWantumService(
         retrofit: Retrofit
-    ) = retrofit.create(WantumService::class.java)
+    ): WantumService = retrofit.create(WantumService::class.java)
 }

@@ -5,5 +5,5 @@ import com.techcafe.wantum.model.Photo
 
 fun PhotoResponse.toModel() = Photo(
     id = id,
-    photoUrl = photoUrl
+    photoUrl = photo_url
 )

@@ -17,8 +17,8 @@ baseDependencies {
 
     implementation(Libs.OkHttp.client)
     implementation(Libs.OkHttp.loggingInterceptor)
-    implementation(Libs.Retrofit.retrofit)
-    implementation(Libs.Retrofit.converterMoshi)
+    api(Libs.Retrofit.retrofit)
+    api(Libs.Retrofit.converterMoshi)
     implementation(Libs.Moshi.moshi)
     implementation(Libs.Moshi.kotlin)
     implementation(Libs.Hilt.android)

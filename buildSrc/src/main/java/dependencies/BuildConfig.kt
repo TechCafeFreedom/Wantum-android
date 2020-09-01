@@ -1,6 +1,7 @@
 package dependencies
 
 import com.android.build.gradle.BaseExtension
+import org.gradle.api.JavaVersion
 
 object BuildConfig {
     const val applicationId = "com.techcafe.wantum"
@@ -26,6 +27,11 @@ fun BaseExtension.baseExtension() {
 
         testInstrumentationRunner = BuildConfig.testInstrumentationRunner
         consumerProguardFiles(BuildConfig.consumerProguardFiles)
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     buildTypes {
