@@ -1,0 +1,30 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+#
+# To use this workflow, you will need to set up a .github/labeler.yml
+# file with configuration.  For more information, see:
+# https://github.com/actions/labeler
+
+name: Labeler
+on:
+  label:
+    types: [created]
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack Notification
+        if: contains(${{github.labels}}, "review ready")
+        uses: rtCamp/action-slack-notify@v2.0.1
+        env:
+          SLACK_CHANNEL: notify-android
+          SLACK_ICON: https://github.com/actions.png?size=48
+          SLACK_TITLE: ':rocket: Review Please :rocket:'
+          SLACK_MESSAGE: |
+            レビューお願いしようと考えた時、すでに通知が終わっている...！！
+            @here (レビューお願いします）
+            ${{github.pull_request.html.href}}
+          SLACK_USERNAME: Github Actions
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        
