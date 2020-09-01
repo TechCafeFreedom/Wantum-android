@@ -1,14 +1,14 @@
-name: Labeler
+name: NoticeReview
 on:
   label:
-    types: [created]
+    types: [created, edited, deleted]
 
 jobs:
   notification:
     runs-on: ubuntu-latest
     steps:
       - name: Slack Notification
-        if: contains(${{github.labels}}, "review ready")
+#         if: contains(${{github.labels}}, "review ready")
         uses: rtCamp/action-slack-notify@v2.0.1
         env:
           SLACK_CHANNEL: notify-android
