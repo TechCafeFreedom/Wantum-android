@@ -6,6 +6,7 @@
 [![Github license](https://img.shields.io/github/license/TechCafeFreedom/Wantum-android)](https://github.com/TechCafeFreedom/Wantum-android/)
 
 # Contributors
+- [felix925](https://github.com/felix925)
 - [Izacchi16](https://github.com/Izacchi16)
 - [ho2ri2s](https://github.com/ho2ri2s)
 - [175atsu](https://github.com/175atsu)
