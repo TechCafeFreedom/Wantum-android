@@ -86,10 +86,10 @@ jobs:
     needs: [setup, build, danger]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: get commit message
         run: |
-          echo ::set-env name=commitmsg::$(git log --pretty='%s' -1 ${{ github.event.after }})
+          echo ::set-env name=commitmsg::$(echo "${{github.event.head_commit.message}}")
       # 失敗したときのSlackへの通知
       - name: Slack Notification Failure
         if: failure()
