@@ -15,15 +15,15 @@ class WannadoDetailFragment : Fragment(), OnClickToolbarItemListener {
     private lateinit var binding: FragmentWannadoDetailBinding
     private val args: WannadoDetailFragmentArgs by navArgs()
 
-    override fun onBackClick() {
+    override fun onClickBack() {
         findNavController().popBackStack()
     }
 
-    override fun onMoreClick() {
+    override fun onClickMore() {
         // TODO Moreボタンタップされたときの処理
     }
 
-    override fun onShareClick() {
+    override fun onClickShare() {
         // TODO Shareボタンタップされたときの処理
     }
 
