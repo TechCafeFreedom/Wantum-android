@@ -15,15 +15,15 @@ class WannadoDetailFragment : Fragment(), OnClickToolbarItemListener {
     private lateinit var binding: FragmentWannadoDetailBinding
     private val args: WannadoDetailFragmentArgs by navArgs()
 
-    override fun onBackClick() {
+    override fun onClickBack() {
         findNavController().popBackStack()
     }
 
-    override fun onMoreClick() {
+    override fun onClickMore() {
         // TODO Moreボタンタップされたときの処理
     }
 
-    override fun onShareClick() {
+    override fun onClickShare() {
         // TODO Shareボタンタップされたときの処理
     }
 
@@ -38,12 +38,9 @@ class WannadoDetailFragment : Fragment(), OnClickToolbarItemListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.toolBarChelWannadoDetail.title = args.wannado
-        binding.toolBarChelWannadoDetail.isShowMore = true
-        binding.toolBarChelWannadoDetail.isShowShare = true
-        binding.toolBarChelWannadoDetail.listener = this
-//        binding.toolBarChelWannadoDetail.buttonToolBarBack.setOnClickListener {
-//            findNavController().popBackStack()
-//        }
+        binding.toolbarChelWannadoDetail.title = args.wannado
+        binding.toolbarChelWannadoDetail.isShowMore = true
+        binding.toolbarChelWannadoDetail.isShowShare = true
+        binding.toolbarChelWannadoDetail.listener = this
     }
 }
