@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.techcafe.wantum.wannado.databinding.FragmentWannadoBinding
 
-class WannadoFragment : Fragment() {
+class WannadoFragment : Fragment(R.layout.fragment_wannado) {
 
     private lateinit var binding: FragmentWannadoBinding
 
@@ -27,17 +27,10 @@ class WannadoFragment : Fragment() {
         "11社長になる"
     )
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentWannadoBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding = FragmentWannadoBinding.bind(view)
 
         val wishListDataBindingViewController = WannadoDataBindingViewController(object :
                 WannadoDataBindingViewController.ClickListener {
