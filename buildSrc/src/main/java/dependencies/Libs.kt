@@ -8,6 +8,7 @@ object Libs {
         const val navigation = "2.3.0"
         const val hilt = "2.28-alpha"
         const val hiltSnap = "1.0.0-SNAPSHOT"
+        const val epoxy = "3.11.0"
     }
 
     object Kotlin {
@@ -34,7 +35,7 @@ object Libs {
         const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
         const val common = "androidx.hilt:hilt-common:${Versions.hiltSnap}"
         const val lifecycleViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltSnap}"
-        const val compiler = "androidx.hilt:hilt-common:${Versions.hiltSnap}"
+        const val compiler = "androidx.hilt:hilt-compiler:${Versions.hiltSnap}"
     }
 
     const val liveEvent = "com.github.hadilq.liveevent:liveevent:1.0.1"
@@ -50,5 +51,10 @@ object Libs {
         const val analytics = "com.google.firebase:firebase-analytics:17.4.4"
         const val auth = "com.google.firebase:firebase-auth:19.3.2"
         const val playServicesAuth = "com.google.android.gms:play-services-auth:18.1.0"
+    }
+    object Epoxy {
+        const val epoxy = "com.airbnb.android:epoxy:${Versions.epoxy}"
+        const val dataBinding = "com.airbnb.android:epoxy-databinding:${Versions.epoxy}"
+        const val processor = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
     }
 }

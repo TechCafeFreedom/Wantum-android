@@ -27,7 +27,8 @@ class SignUpFragment : Fragment() {
     }
 
     private val factory = SignUpViewModelFactory(AuthRepositoryImpl())
-    private val viewModel: SignUpViewModel by viewModels(factoryProducer = { factory })
+//    private val viewModel: SignUpViewModel by viewModels(factoryProducer = { factory })
+    private val viewModel: SignUpViewModel by viewModels(factoryProducer = {factory})
 
     private val googleSignInOptions: GoogleSignInOptions by lazy {
         val signInOption = GoogleSignInOptions.DEFAULT_SIGN_IN

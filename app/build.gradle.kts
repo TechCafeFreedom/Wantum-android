@@ -7,12 +7,20 @@ plugins {
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
-    id("com.google.gms.google-services")
     id("dagger.hilt.android.plugin")
 }
+
+apply{
+    file("gradle/projectDependencyGraph.gradle")
+}
+
 android {
     baseExtension()
     defaultConfig.applicationId = BuildConfig.applicationId
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
     @Suppress("UnstableApiUsage")
     buildFeatures {
@@ -32,6 +40,7 @@ baseDependencies {
     implementation(project(":model"))
     implementation(project(":data:repository"))
     implementation(Libs.AndroidX.fragmentKts)
+    implementation(Libs.AndroidX.activityKts)
     implementation(Libs.Firebase.analytics)
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)
@@ -41,6 +50,9 @@ baseDependencies {
     implementation(Libs.Hilt.lifecycleViewModel)
     kapt(Libs.Hilt.compiler)
     kapt(Libs.Hilt.androidCompiler)
+    implementation(Libs.Epoxy.dataBinding)
+    implementation(Libs.Epoxy.epoxy)
+    kapt(Libs.Epoxy.processor)
 }
 testDependencies()
 

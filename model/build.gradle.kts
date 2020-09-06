@@ -6,6 +6,10 @@ plugins {
     id("kotlin-android-extensions")
 }
 
+apply{
+    file("gradle/projectDependencyGraph.gradle")
+}
+
 android {
     baseExtension()
 }

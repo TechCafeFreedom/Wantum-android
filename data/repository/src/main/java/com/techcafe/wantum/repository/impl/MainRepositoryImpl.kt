@@ -6,10 +6,10 @@ import com.techcafe.wantum.repository.MainRepository
 
 class MainRepositoryImpl : MainRepository {
 
-    override suspend fun getWebClientId(clientId: String) {
-//        getSharedPreferences("my_settings", Context.MODE_PRIVATE).edit().apply {
-//            putString("stringValue", clientId)
-//            commit()
-//        }
+    override suspend fun getWebClientId(clientId: String, context: Context) {
+        context.getSharedPreferences("my_settings", Context.MODE_PRIVATE).edit().apply {
+            putString("stringValue", clientId)
+            commit()
+        }
     }
 }

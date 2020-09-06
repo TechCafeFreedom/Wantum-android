@@ -1,5 +1,6 @@
 package com.techcafe.wantum
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.techcafe.wantum.repository.MainRepository
@@ -11,9 +12,9 @@ class MainViewModel(
     private val mainRepository: MainRepository
 ): ViewModel() {
 
-    fun getWebClientId(aaa:String) {
+    fun getWebClientId(aaa:String, context: Context) {
         viewModelScope.launch {
-            mainRepository.getWebClientId(aaa)
+            mainRepository.getWebClientId(aaa, context)
         }
     }
 }
