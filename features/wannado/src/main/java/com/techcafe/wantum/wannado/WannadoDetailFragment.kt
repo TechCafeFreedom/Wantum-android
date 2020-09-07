@@ -8,7 +8,8 @@ import androidx.navigation.fragment.navArgs
 import com.techcafe.wantum.resource.OnClickToolbarItemListener
 import com.techcafe.wantum.wannado.databinding.FragmentWannadoDetailBinding
 
-class WannadoDetailFragment : Fragment(R.layout.fragment_wannado_detail),
+class WannadoDetailFragment :
+    Fragment(R.layout.fragment_wannado_detail),
     OnClickToolbarItemListener {
 
     private lateinit var binding: FragmentWannadoDetailBinding
