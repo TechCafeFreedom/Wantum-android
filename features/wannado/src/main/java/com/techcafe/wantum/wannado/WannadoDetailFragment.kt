@@ -27,7 +27,6 @@ class WannadoDetailFragment : Fragment(R.layout.fragment_wannado_detail), OnClic
 
         binding.toolbarChelWannadoDetail.title = args.wannado
         binding.toolbarChelWannadoDetail.isShowMore = true
-        binding.toolbarChelWannadoDetail.isShowShare = true
         binding.toolbarChelWannadoDetail.listener = this
     }
 }

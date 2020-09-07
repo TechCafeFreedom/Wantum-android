@@ -12,10 +12,6 @@
             type="String" />
 
         <variable
-            name="isShowShare"
-            type="Boolean" />
-
-        <variable
             name="isShowMore"
             type="Boolean" />
 
@@ -55,7 +51,7 @@
                 android:text="@{title}"
                 android:textAppearance="@style/Text.Black.Bold.Toolbar"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button_toolbar_share"
+                app:layout_constraintEnd_toStartOf="@+id/button_toolbar_more"
                 app:layout_constraintStart_toEndOf="@+id/button_toolbar_back"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="オンラインデートオンラインデートオンラインデート" />
