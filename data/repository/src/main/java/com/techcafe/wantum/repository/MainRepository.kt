@@ -4,5 +4,5 @@ import android.content.Context
 
 interface MainRepository {
 
-    suspend fun getWebClientId(aaa: String, context: Context)
+    suspend fun getWebClientId(tokenId: String, context: Context)
 }

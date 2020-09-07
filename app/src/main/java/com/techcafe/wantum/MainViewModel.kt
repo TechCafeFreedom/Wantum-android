@@ -10,11 +10,11 @@ import kotlinx.coroutines.launch
 @ExperimentalCoroutinesApi
 class MainViewModel(
     private val mainRepository: MainRepository
-): ViewModel() {
+) : ViewModel() {
 
-    fun getWebClientId(aaa:String, context: Context) {
+    fun getWebClientId(tokenId: String, context: Context) {
         viewModelScope.launch {
-            mainRepository.getWebClientId(aaa, context)
+            mainRepository.getWebClientId(tokenId, context)
         }
     }
 }

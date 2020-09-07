@@ -6,7 +6,7 @@ import com.techcafe.wantum.repository.MainRepository
 
 class MainViewModelFactory(
     private val repository: MainRepository
-): ViewModelProvider.NewInstanceFactory() {
+) : ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

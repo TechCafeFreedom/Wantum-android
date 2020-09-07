@@ -3,7 +3,6 @@ package com.techcafe.wantum.auth
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,8 +26,9 @@ class SignUpFragment : Fragment() {
     }
 
     private val factory = SignUpViewModelFactory(AuthRepositoryImpl())
-//    private val viewModel: SignUpViewModel by viewModels(factoryProducer = { factory })
-    private val viewModel: SignUpViewModel by viewModels(factoryProducer = {factory})
+
+    //    private val viewModel: SignUpViewModel by viewModels(factoryProducer = { factory })
+    private val viewModel: SignUpViewModel by viewModels(factoryProducer = { factory })
 
     private val googleSignInOptions: GoogleSignInOptions by lazy {
         val signInOption = GoogleSignInOptions.DEFAULT_SIGN_IN

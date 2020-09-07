@@ -8,11 +8,13 @@ plugins {
     id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
 }
 
-apply{
+apply {
     file("gradle/projectDependencyGraph.gradle")
 }
+apply(mapOf("plugin" to "com.google.gms.google-services"))
 
 android {
     baseExtension()
