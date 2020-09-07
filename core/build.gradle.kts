@@ -5,6 +5,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-android-extensions")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 apply{
@@ -26,11 +27,12 @@ android {
     @Suppress("UnstableApiUsage")
     buildFeatures {
         dataBinding = true
-        viewBinding = true
     }
 }
 
 baseDependencies {
+    implementation(project(":features:resource"))
+
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)
     implementation(Libs.AndroidX.navRuntime)

@@ -18,10 +18,13 @@ android {
     baseExtension()
     defaultConfig.applicationId = BuildConfig.applicationId
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     @Suppress("UnstableApiUsage")
     buildFeatures {
         dataBinding = true
-        viewBinding = true
     }
 }
 

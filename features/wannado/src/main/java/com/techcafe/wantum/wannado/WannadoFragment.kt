@@ -1,18 +1,15 @@
 package com.techcafe.wantum.wannado
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.techcafe.wantum.wannado.databinding.FragmentWannaDoBinding
-import kotlinx.android.synthetic.main.fragment_wanna_do.*
+import com.techcafe.wantum.wannado.databinding.FragmentWannadoBinding
 
-class WannaDoFragment : Fragment() {
+class WannadoFragment : Fragment(R.layout.fragment_wannado) {
 
-    private lateinit var binding: FragmentWannaDoBinding
+    private lateinit var binding: FragmentWannadoBinding
 
     private val toDoList = listOf<String>(
         "1オンラインデート",
@@ -28,26 +25,20 @@ class WannaDoFragment : Fragment() {
         "11社長になる"
     )
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentWannaDoBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val wishListDataBindingViewController = WannaDoDataBindingViewController(object :
-            WannaDoDataBindingViewController.ClickListener {
-            override fun onClicked(item: String) {
-                Toast.makeText(context, "$item is Clicked", Toast.LENGTH_SHORT).show()
-            }
-        })
+        binding = FragmentWannadoBinding.bind(view)
 
-        binding.recyclerViewWannaDo.apply {
+        val wishListDataBindingViewController = WannadoDataBindingViewController(object :
+                WannadoDataBindingViewController.ClickListener {
+                override fun onClicked(item: String) {
+                    val action = WannadoFragmentDirections.actionWannadoToWannadoDetail(item)
+                    findNavController().navigate(action)
+                }
+            })
+
+        binding.recyclerViewWannado.apply {
             adapter = wishListDataBindingViewController.adapter
             layoutManager = LinearLayoutManager(context).apply {
                 orientation = LinearLayoutManager.VERTICAL
