@@ -9,6 +9,8 @@ object Libs {
         const val hilt = "2.28-alpha"
         const val hiltSnap = "1.0.0-SNAPSHOT"
         const val epoxy = "3.11.0"
+        const val hyperion = "0.9.29"
+        const val jitpack = "1.0.0"
     }
 
     object Kotlin {
@@ -56,5 +58,24 @@ object Libs {
         const val epoxy = "com.airbnb.android:epoxy:${Versions.epoxy}"
         const val dataBinding = "com.airbnb.android:epoxy-databinding:${Versions.epoxy}"
         const val processor = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
+    }
+
+    object Hyperion {
+        val core = "com.willowtreeapps.hyperion:hyperion-core:${Versions.hyperion}"
+        val attr = "com.willowtreeapps.hyperion:hyperion-attr:${Versions.hyperion}"
+        val measurement =
+            "com.willowtreeapps.hyperion:hyperion-measurement:${Versions.hyperion}"
+        val disk = "com.willowtreeapps.hyperion:hyperion-disk:${Versions.hyperion}"
+        val recorder = "com.willowtreeapps.hyperion:hyperion-recorder:${Versions.hyperion}"
+        val phoenix = "com.willowtreeapps.hyperion:hyperion-phoenix:${Versions.hyperion}"
+        val crash = "com.willowtreeapps.hyperion:hyperion-crash:${Versions.hyperion}"
+        val preferences =
+            "com.willowtreeapps.hyperion:hyperion-shared-preferences:${Versions.hyperion}"
+        val counter = "com.willowtreeapps.hyperion:hyperion-geiger-counter:${Versions.hyperion}"
+        val buildConfig =
+            "com.willowtreeapps.hyperion:hyperion-build-config:${Versions.hyperion}"
+        val plugin = "com.willowtreeapps.hyperion:hyperion-plugin:${Versions.hyperion}"
+        val timber = "com.willowtreeapps.hyperion:hyperion-timber:${Versions.hyperion}"
+        val http = "com.github.Commit451:Hyperion-Chuck:${Versions.jitpack}"
     }
 }
