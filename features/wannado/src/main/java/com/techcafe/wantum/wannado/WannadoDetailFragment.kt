@@ -5,7 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.techcafe.wantum.resource.OnClickToolbarItemListener
+import com.techcafe.wantum.core.OnClickToolbarItemListener
 import com.techcafe.wantum.wannado.databinding.FragmentWannadoDetailBinding
 
 class WannadoDetailFragment :

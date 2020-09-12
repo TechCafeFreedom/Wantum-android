@@ -4,7 +4,6 @@ include ':app',
         ':features:settings',
         ':features:auth',
         ':core',
-        ':features:resource',
         ':features:wannado',
         ':features:timeline',
         ':features:memories'

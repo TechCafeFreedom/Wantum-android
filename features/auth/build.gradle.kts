@@ -43,7 +43,6 @@ android {
 
 baseDependencies {
     implementation(project(":data:repository"))
-    implementation(project(":features:resource"))
     implementation(project(":model"))
     implementation(project(":core"))
 
