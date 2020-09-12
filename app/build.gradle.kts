@@ -13,8 +13,6 @@ plugins {
 apply {
     file("gradle/projectDependencyGraph.gradle")
 }
-apply(mapOf("plugin" to "com.google.gms.google-services"))
-
 android {
     baseExtension()
     defaultConfig.applicationId = BuildConfig.applicationId
