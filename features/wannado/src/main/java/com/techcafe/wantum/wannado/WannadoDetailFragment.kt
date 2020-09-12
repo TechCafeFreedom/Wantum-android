@@ -20,7 +20,9 @@ class WannadoDetailFragment :
     }
 
     override fun onClickMore() {
-        // TODO Moreボタンタップされたときの処理
+        val fragmentManager = requireActivity().supportFragmentManager
+        WannadoEditDialogFragment.newInstance()
+            .show(fragmentManager, "tag")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

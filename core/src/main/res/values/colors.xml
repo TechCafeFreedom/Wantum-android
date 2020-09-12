@@ -17,4 +17,8 @@
     <color name="sky_blue">#70A8BA</color>
     <color name="green">#9BBEA2</color>
     <color name="kiwi_green">#A9CAAF</color>
+    <color name="text_light">#868383</color>
+    <color name="bottom_item">#FFFCFB</color>
+    <color name="back_base">#F5F0EA</color>
+    <color name="gray">#E4E4E4</color>
 </resources>
