@@ -17,7 +17,7 @@
 
         <variable
             name="listener"
-            type="com.techcafe.wantum.resource.OnClickToolbarItemListener" />
+            type="com.techcafe.wantum.core.OnClickToolbarItemListener" />
     </data>
 
     <androidx.appcompat.widget.Toolbar

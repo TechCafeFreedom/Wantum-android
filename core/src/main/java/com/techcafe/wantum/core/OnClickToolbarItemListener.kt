@@ -1,4 +1,4 @@
-package com.techcafe.wantum.resource
+package com.techcafe.wantum.core
 
 interface OnClickToolbarItemListener {
     fun onClickBack()
