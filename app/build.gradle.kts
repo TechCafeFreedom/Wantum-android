@@ -8,7 +8,6 @@ plugins {
     id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
-    id("com.google.gms.google-services")
 }
 
 apply {
