@@ -12,6 +12,11 @@ apply{
 
 android {
     baseExtension()
+
+    @Suppress("UnstableApiUsage")
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 baseDependencies {

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="isShowMore"
+            type="Boolean" />
+
+        <variable
+            name="listener"
+            type="com.techcafe.wantum.resource.OnClickToolbarItemListener" />
+    </data>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingHorizontal="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/button_toolbar_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ripple_effect"
+                android:importantForAccessibility="no"
+                android:onClick="@{() -> listener.onClickBack()}"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_toolbar_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@{title}"
+                android:textAppearance="@style/Text.Black.Bold.Toolbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_toolbar_more"
+                app:layout_constraintStart_toEndOf="@+id/button_toolbar_back"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="オンラインデートオンラインデートオンラインデート" />
+
+            <ImageButton
+                android:id="@+id/button_toolbar_more"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ripple_effect"
+                android:importantForAccessibility="no"
+                android:onClick="@{() -> listener.onClickMore()}"
+                android:src="@drawable/ic_more"
+                android:visibility="@{isShowMore ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+</layout>

@@ -6,6 +6,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 apply{
@@ -27,7 +28,6 @@ android {
     @Suppress("UnstableApiUsage")
     buildFeatures {
         dataBinding = true
-        viewBinding = true
     }
 }
 

@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="Text"/>
+
     <style name="TextDarkBlueBold">
         <item name="android:elevation">8dp</item>
         <item name="android:textColor">@color/dark_blue</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.Black.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Black.Bold.Toolbar">
+        <item name="android:textSize">@dimen/font_size_header_tool_bar</item>
     </style>
 
     <style name="ButtonCreamBold">

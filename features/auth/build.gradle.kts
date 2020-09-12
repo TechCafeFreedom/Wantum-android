@@ -38,7 +38,6 @@ android {
     @Suppress("UnstableApiUsage")
     buildFeatures {
         dataBinding = true
-        viewBinding = true
     }
 }
 
