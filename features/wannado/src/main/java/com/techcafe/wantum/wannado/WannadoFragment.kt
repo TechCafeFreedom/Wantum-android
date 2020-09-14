@@ -31,24 +31,23 @@ class WannadoFragment : Fragment(R.layout.fragment_wannado) {
         binding = FragmentWannadoBinding.bind(view)
 
         val wishListDataBindingViewController = WannadoDataBindingViewController(object :
-                WannadoDataBindingViewController.ClickListener {
-                override fun onClicked(item: String) {
-                    val action = WannadoFragmentDirections.actionWannadoToWannadoDetail(item)
-                    findNavController().navigate(action)
-                }
-            })
-
-        binding.recyclerViewWannado.apply {
-            adapter = wishListDataBindingViewController.adapter
-            layoutManager = LinearLayoutManager(context).apply {
-                orientation = LinearLayoutManager.VERTICAL
+            WannadoDataBindingViewController.ClickListener {
+            override fun onClicked(item: String) {
+                val action = WannadoFragmentDirections.actionWannadoToWannadoDetail(item)
+                findNavController().navigate(action)
             }
-        }
+        })
 
-        binding.fabWannado.setOnClickListener {
-            val fragmentManager = requireActivity().supportFragmentManager
-            val newFragment = WannaDoDialogFragment()
-            newFragment.show(fragmentManager, "wannado_dialog")
+        with(binding){
+            recyclerViewWannado.apply {
+                adapter = wishListDataBindingViewController.adapter
+                layoutManager = LinearLayoutManager(context).apply {
+                    orientation = LinearLayoutManager.VERTICAL
+                }
+            }
+            fabWannado.setOnClickListener {
+                WannaDoDialogFragment().show(requireActivity().supportFragmentManager, "wannado_dialog")
+            }
         }
 
         wishListDataBindingViewController.setData(toDoList)
