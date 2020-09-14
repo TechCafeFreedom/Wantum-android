@@ -45,6 +45,12 @@ class WannadoFragment : Fragment(R.layout.fragment_wannado) {
             }
         }
 
+        binding.fabWannado.setOnClickListener {
+            val fragmentManager = requireActivity().supportFragmentManager
+            val newFragment = WannaDoDialogFragment()
+            newFragment.show(fragmentManager, "wannado_dialog")
+        }
+
         wishListDataBindingViewController.setData(toDoList)
     }
 }
