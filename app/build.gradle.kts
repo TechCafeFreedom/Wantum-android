@@ -10,9 +10,11 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
-apply{
+apply {
     file("gradle/projectDependencyGraph.gradle")
 }
+
+apply(mapOf("plugin" to "com.google.gms.google-services"))
 
 android {
     baseExtension()
@@ -38,6 +40,7 @@ baseDependencies {
     implementation(project(":model"))
     implementation(project(":data:repository"))
     implementation(Libs.AndroidX.fragmentKts)
+    implementation(Libs.AndroidX.activityKts)
     implementation(Libs.Firebase.analytics)
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)

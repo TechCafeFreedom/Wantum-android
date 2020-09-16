@@ -1,6 +1,7 @@
 package com.techcafe.wantum.auth
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,8 +30,10 @@ class SignUpFragment : Fragment() {
 
     private val googleSignInOptions: GoogleSignInOptions by lazy {
         val signInOption = GoogleSignInOptions.DEFAULT_SIGN_IN
+        val pref = this.activity?.getSharedPreferences("my_settings", Context.MODE_PRIVATE)
+        val stringValue = pref?.getString("stringValue", "")
         GoogleSignInOptions.Builder(signInOption)
-            .requestIdToken(BuildConfig.REQUEST_ID_TOKEN)
+            .requestIdToken(stringValue)
             .requestEmail().build()
     }
 
