@@ -22,4 +22,8 @@ class WannadoEditDialogFragment : BottomSheetDialogFragment() {
         binding = FragmentWannadoEditDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    override fun getTheme(): Int {
+        return R.style.CustomShapeAppearanceBottomSheetDialog
+    }
 }

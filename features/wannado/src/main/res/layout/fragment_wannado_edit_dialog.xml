@@ -17,8 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/AppTheme.ShareDialog"
-        android:background="@drawable/shape_rounded_corner_top"
+        android:background="@color/back_base"
         android:orientation="vertical">
 
         <TextView
@@ -44,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/bottom_item">
+            android:background="@drawable/shape_rounded_corners_10dp">
 
             <TextView
                 android:layout_width="match_parent"

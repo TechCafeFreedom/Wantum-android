@@ -32,6 +32,7 @@ android {
 
 baseDependencies {
 
+    implementation(Libs.AndroidX.design)
     implementation(Libs.AndroidX.navFragmentKtx)
     implementation(Libs.AndroidX.navUi)
     implementation(Libs.AndroidX.navRuntime)

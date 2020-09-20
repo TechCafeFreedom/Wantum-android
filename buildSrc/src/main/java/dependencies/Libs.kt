@@ -23,6 +23,7 @@ object Libs {
         const val appCompat = "androidx.appcompat:appcompat:1.1.0"
         const val coreKtx = "androidx.core:core-ktx:1.3.0"
         const val constraint = "androidx.constraintlayout:constraintlayout:1.1.3"
+        const val design = "com.google.android.material:material:1.2.1"
         const val fragmentKts = "androidx.fragment:fragment-ktx:${Versions.fragment}"
         const val activityKts = "androidx.activity:activity-ktx:${Versions.activity}"
         const val liveDataKts = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
