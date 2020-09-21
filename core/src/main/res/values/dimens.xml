@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="bottom_sheet_corner_radius">16dp</dimen>
+    <dimen name="bottom_sheet_elevation">1dp</dimen>
     <dimen name="font_size_header_tool_bar">16sp</dimen>
 </resources>
